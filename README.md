@@ -77,3 +77,24 @@ O candidato pode, se desejar, utilizar o design sugerido abaixo:
 - Clareza no fluxo de dados entre frontend, backend e banco de dados.
 
 ---
+
+## Crie o banco no MySQL
+
+CREATE DATABASE ranking_test;
+
+## Edite knexfile.js com suas credenciais
+
+connection: {
+  host: '127.0.0.1',
+  user: 'root',
+  password: 'sua_senha',
+  database: 'ranking_test'
+}
+
+## Execute as migrations
+
+npx knex migrate:latest
+
+## Rodando o servidor
+
+node src/app.js
