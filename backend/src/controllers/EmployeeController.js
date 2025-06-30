@@ -38,7 +38,7 @@ module.exports = {
         const [id] = await db('employees').insert({
             name,
             role,
-            photo: photo,
+            photo,
         });
 
         return res.status(201).json({ id });
